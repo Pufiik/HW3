@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textFragment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:text="@string/uid"
+        android:textColor="@color/light_grey"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <GridLayout
+        android:id="@+id/layout1"
+        android:layout_width="292dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/input_layout_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFragment1"
+      >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_column="0"
+            android:src="@drawable/email" />
+
+        <EditText
+            android:id="@+id/textEmailAddress"
+            android:layout_width="228dp"
+            android:layout_height="50dp"
+            android:ems="20"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="@string/phone"
+            android:textColor="@color/light_grey"/>
+    </GridLayout>
+    <TextView
+        android:id="@+id/textFragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:text="@string/forget"
+        android:textColor="@color/pink"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn1"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:text="@string/in"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:background="@drawable/button_rounded_1"
+        android:textColor="@color/pink"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFragment2"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn2"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="@string/reg"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:background="@drawable/button_rounded_2"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:layout_marginBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/secondfragment"
+        android:name="ru.pugovishnikova.example.hw3.Secondfragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn1"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:text="@string/more"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:background="@drawable/button_rounded_1"
+        android:textColor="@color/pink"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondfragment"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn2"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:textColor="@color/pink"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:background="@drawable/button_rounded_3"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:layout_marginBottom="10dp"/>
+
+    <GridLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@drawable/bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:src="@drawable/twotone_search"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:src="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:src="@drawable/round_settings" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

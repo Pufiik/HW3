@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HW3</string>
+    <string name="registration_text">Войдите с использованием чего-то там</string>
+    <string name="forget">Я всё забыл</string>
+    <string name="uid">Your ID</string>
+    <string name="in">Войти</string>
+    <string name="reg">Зарегистрироваться</string>
+    <string name="phone">Телефон или почта</string>
+    <string name="more">Подробнее</string>
+    <string name="next">Пропустить</string>
+</resources>
