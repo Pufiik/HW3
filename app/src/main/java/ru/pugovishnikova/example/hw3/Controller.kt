@@ -21,13 +21,22 @@ object Controller {
         }
     }
 
-    fun getData(ind: Int, callback: (result: Map<String, String>?) -> Unit) {
+    fun getData(ind: Int, callback: (result: Map<String, Any>?, error: Throwable?) -> Unit) {
         scope.launch {
             delay(2000L)
-            var data = Provider.getInfo(ind)
-            var result = data
-            withContext(Dispatchers.Main) {
-                callback(result)
+            try {
+                var data = Provider.getInfo(ind)
+                var result = data
+                var rand = (0..10).random()
+                if (rand % 2 == 0)
+                    throw Exception("exeption")
+                withContext(Dispatchers.Main) {
+                    callback(result, null)
+                }
+            } catch (e: Throwable) {
+                withContext(Dispatchers.Main) {
+                    callback(null, e)
+                }
             }
         }
     }

@@ -7,5 +7,6 @@
     <string name="reg">Зарегистрироваться</string>
     <string name="phone">Телефон или почта</string>
     <string name="more">Подробнее</string>
+    <string name="repeat">Повторить</string>
     <string name="next">Пропустить</string>
 </resources>
