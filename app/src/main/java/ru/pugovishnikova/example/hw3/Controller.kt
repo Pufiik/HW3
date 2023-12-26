@@ -1,6 +1,5 @@
 package ru.pugovishnikova.example.hw3
 
-import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -11,17 +10,10 @@ import kotlinx.coroutines.withContext
 object Controller {
 
     val scope = CoroutineScope(Dispatchers.IO)
-    private val mapData = mapOf (
-        "title" to "bcvuerbior",
-        "body" to "bfviurehwifge;ifirh4w",
-        "caption" to "fhgvureiohvle",
-    )
-    private val email = "daria.pugovka@yahoo.com"
     fun checkEmail(emailEditText: String, callback: (result: Boolean) -> Unit) {
         scope.launch {
             delay(4000L)
-            val result = emailEditText == email
-            Log.i("AAA", emailEditText)
+            val result = emailEditText == Provider.getEmail()
             withContext(Dispatchers.Main) {
                 callback(result)
             }
@@ -29,31 +21,14 @@ object Controller {
         }
     }
 
-    fun getData(id: String, callback: (result: Map<String, String>, res: Boolean) -> Unit) {
+    fun getData(ind: Int, callback: (result: Map<String, String>?) -> Unit) {
         scope.launch {
             delay(2000L)
-            var result = mapData["id"] == id
-            Log.i("AAAA", result.toString())
-//            withContext(Dispatchers.Main) {
-//                callback(mapData["id"], result)
-//            }
-
+            var data = Provider.getInfo(ind)
+            var result = data
+            withContext(Dispatchers.Main) {
+                callback(result)
+            }
         }
     }
 }
-//    fun loadData(callback: (result: Map<String, String>, error: Throwable?) -> Unit) {
-//        scope.launch {
-//            try {
-//                val result = requireService().getTrendingGifs()
-//                withContext(Dispatchers.Main) {
-//                    callback(result, null)
-//                }
-//
-//            } catch (e: Throwable) {
-//                withContext(Dispatchers.Main) {
-//                    callback(null, e)
-//                }
-//            }
-//        }
-//    }
-

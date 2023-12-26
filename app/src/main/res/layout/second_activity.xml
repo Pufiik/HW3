@@ -11,40 +11,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn1"
-        android:layout_width="292dp"
-        android:layout_height="50dp"
-        android:text="@string/more"
-        android:textSize="14sp"
-        android:textAllCaps="false"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:background="@drawable/button_rounded_1"
-        android:textColor="@color/pink"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/secondfragment"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn2"
-        android:layout_width="292dp"
-        android:layout_height="50dp"
-        android:textColor="@color/pink"
-        android:text="@string/next"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:background="@drawable/button_rounded_3"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginTop="17dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
-        android:layout_marginBottom="10dp"/>
-
     <GridLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
